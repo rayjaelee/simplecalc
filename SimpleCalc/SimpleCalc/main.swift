@@ -39,6 +39,9 @@ public class Calculator {
     private func complexCalc(_ args: [String]) -> Int {
         let calcType = args[args.count - 1]
         if calcType == "fact" {
+            if args.count == 1 {
+                return 0
+            }
             var result = 1
             let target: Int! = Int(args[0])
             for num in 1...target {
@@ -48,12 +51,18 @@ public class Calculator {
         } else if calcType == "count" {
             return args.count - 1
         } else if calcType == "avg" {
+            
+            if args.count == 1 {
+                return 0
+            }
             var total = 0
-            for i in 0...args.count - 1 {
-                let num: Int! = Int(args[i])
+            let size = args.count - 1
+            for i in 1...size {
+                let num: Int! = Int(args[i - 1])
                 total += num
             }
-            return total
+            return total / size
+            
         }
         return 0
     }
