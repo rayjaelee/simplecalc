@@ -51,7 +51,6 @@ public class Calculator {
         } else if calcType == "count" {
             return args.count - 1
         } else if calcType == "avg" {
-            
             if args.count == 1 {
                 return 0
             }
@@ -62,7 +61,6 @@ public class Calculator {
                 total += num
             }
             return total / size
-            
         }
         return 0
     }
