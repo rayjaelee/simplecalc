@@ -36,6 +36,26 @@ public class Calculator {
         return 0
     }
     
+    public func calculateFloat(_ args: [String]) -> Float {
+        if args.count == 3 {
+            
+            let arthSymbol = args[1]
+            let first: Float! = Float(args[0])
+            let second: Float! = Float(args[2])
+            
+            if arthSymbol == "+" {
+                return first + second
+            } else if arthSymbol == "-" {
+                return first - second
+            } else if arthSymbol == "/" {
+                return first / second
+            } else if arthSymbol == "*" {
+                return first * second
+            }
+        }
+        return 0.0
+    }
+    
     private func complexCalc(_ args: [String]) -> Int {
         let calcType = args[args.count - 1]
         if calcType == "fact" {

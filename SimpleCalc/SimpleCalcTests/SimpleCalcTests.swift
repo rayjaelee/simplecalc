@@ -22,6 +22,10 @@ class ExtendedCalcTests :XCTestCase {
     func testNegativeOps() {
         XCTAssert(calc.calculate(["2", "+", "-12"]) == -10)
     }
+    
+    func testFloatOps() {
+        XCTAssert(calc.calculateFloat(["2.0", "+", "2.0"]) == 4.0)
+    }
 }
 
 class SimpleCalcTests: XCTestCase {
